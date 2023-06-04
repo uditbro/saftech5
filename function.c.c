@@ -1,48 +1,48 @@
 // writing addition, subtraction, division and multiplication function.
 #include <stdio.h>
 
-int addition(int a, int b);
-int subtraction(int d, int e);
-int multiplication(int g, int h);
+float addition(float a, float b);
+float subtraction(float d, float e);
+float multiplication(float g, float h);
 float division(float j, float k);
 
 int main(){
     char ch;
-    printf("Enter the operator you want to execute: \n");
     printf("Enter 'a' for addition \n");
     printf("Enter 's' for subtraction \n");
     printf("Enter 'm' for multiplication \n");
     printf("Enter 'd' for divison \n");
+    printf("Enter the operator you want to execute: ");
     scanf ("%c", &ch);
     if (ch == 'a'){                                 //addition
-        int a,b;
+        float a,b;
         printf("Enter the number: ");
-        scanf("%d",&a);
+        scanf("%f",&a);
         printf("Enter the number: ");
-        scanf("%d",&b);
+        scanf("%f",&b);
 
-        int c = addition(a,b);
-        printf("\n the addition of %d and %d is: %d", a,b,c);
+        float c = addition(a,b);
+        printf("\n the addition of %f and %f is: %f", a,b,c);
     }
     else if (ch == 's'){                          //subtraction
-        int d,e;
+        float d,e;
         printf("Enter the number: ");
-        scanf("%d",&d);
+        scanf("%f",&d);
         printf("Enter the number: ");
-        scanf("%d",&e);
+        scanf("%f",&e);
 
-        int f = subtraction(d,e);
-        printf("\n the subtraction of %d and %d is: %d", d,e,f);    
+        float f = subtraction(d,e);
+        printf("\n the subtraction of %f and %f is: %f", d,e,f);    
     }
     else if( ch == 'm'){                        // multiplication
-        int g,h;
+        float g,h;
         printf("Enter the number: ");
-        scanf("%d",&g);
+        scanf("%f",&g);
         printf("Enter the number: ");
-        scanf("%d",&h);
+        scanf("%f",&h);
 
-        int i = multiplication(g,h);
-        printf("\n the multiplication of %d and %d is: %d", g,h,i);
+        float i = multiplication(g,h);
+        printf("\n the multiplication of %f and %f is: %f", g,h,i);
     }
     else if (ch == 'd'){                       // division
         float j,k;
@@ -62,16 +62,16 @@ return 0;
     
 }
 
-int addition(int a, int b){
-    int x= a+b;
+float addition(float a, float b){
+    float x= a+b;
     return x;
 }
-int subtraction(int d, int e){
-    int y=d-e;
+float subtraction(float d, float e){
+    float y=d-e;
     return y;
 }
-int multiplication(int g, int h){
-    int z= g*h;
+float multiplication(float g, float h){
+    float z= g*h;
     return z;
 }
 float division(float j, float k){
